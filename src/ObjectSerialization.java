@@ -8,72 +8,81 @@ public class ObjectSerialization {
     public static void main(String[] args) {
 
         try {
-            FileOutputStream fileOutputStream = new FileOutputStream("storage-mainLesson1.bin");
+            FileOutputStream fileOutputStream = new FileOutputStream("storage-students.bin");
             ObjectOutputStream objectOutputStream = new ObjectOutputStream(fileOutputStream);
 
-            List<Lesson> lessonListCourse1 = new ArrayList<>(List.of(
-                    new Lesson("Programming Princeples 1", "CSCI1103", 6),
-                    new Lesson("Calculus 1", "MATH1102", 5),
-                    new Lesson("Discrete Stuctures", "CSCI1102", 5),
-                    new Lesson("English", "LAN1180", 10),
-                    new Lesson("Programming Princeples 2", "CSCI1204", 6),
-                    new Lesson("Calculus 2", "MATH1202", 5),
-                    new Lesson("Physics 1", "FUN1105", 5),
-                    new Lesson("Statistics", "STAT2201", 5),
-                    new Lesson("Merging Personal and Global", "HUM1137", 8),
-                    new Lesson("Linear Algebra", "MATH1203", 5)
-
-            ));
-            HashMap<Integer, List<Lesson>> lessonMap = new HashMap<>();
-            lessonMap.put(1, lessonListCourse1);
-
-            List<Lesson> lessonListCourse2 = new ArrayList<>(List.of(
-                    new Lesson("Database", "CSCI2104", 5),
-                    new Lesson("Algorithms and Data Structures", "CSCI2105", 5),
-                    new Lesson("Computer Architecture", "CSCI3115", 5),
-                    new Lesson("Object-Oriented Programming and Design", "CSCI2106", 5),
-                    new Lesson("Physical Education 1", "PHE101", 4),
-                    new Lesson("Russian", "LAN1100", 5),
-                    new Lesson("Kazakh", "LAN1100", 5),
-                    new Lesson("Web development", "INFT2205", 6),
-                    new Lesson("Computer Networks", "CSCI2109", 6),
-                    new Lesson("Introduction to Bussiness Network", "CSCI2109", 6),
-                    new Lesson(),
-                    new Lesson("Physical Education 2", "PHE102", 4)
-            ));
-            lessonMap.put(2, lessonListCourse2);
-
-            List<Lesson> lessonListCourse3 = new ArrayList<>(List.of(
-                    new Lesson("Software Engineering", "CSCI2208", 5),
-                    new Lesson("Fundamentals of bussiness for Information Systems", "INF3106", 5),
-                    new Lesson("Basics of Information Systems", "INF3106", 5),
-                    new Lesson(),
-                    new Lesson("ICT", "INFT1101", 5),
-                    new Lesson("History", "HUM1101", 5),
-                    new Lesson("Field Prrojects for IS", "INFT3210", 5),
-                    new Lesson("Cyber Security", "INFT3105", 5),
-                    new Lesson(),
-                    new Lesson(),
-                    new Lesson(),
-                    new Lesson("Philosophy", "HUM1102",5)
-
-            ));
-            lessonMap.put(3, lessonListCourse3);
-            List<Lesson> lessonListCourse4 = new ArrayList<>(List.of(
-                    new Lesson("IT Project Management", "INFT3108",5),
-                    new Lesson("Industrial Internship", "PRA334",5),
-                    new Lesson(),
-                    new Lesson(),
-                    new Lesson(),
-                    new Lesson(),
-                    new Lesson(),
-                    new Lesson(),
-                    new Lesson("Research Tools and Methods", "CSCI4102", 4),
-                    new Lesson("Pre Diploma internship", "PRA437", 8),
-                    new Lesson("Final Attestation", "IA504", 5)
-            ));
-            lessonMap.put(4, lessonListCourse4);
-            objectOutputStream.writeObject(lessonMap);
+//            List<Lesson> lessonListCourse1 = new ArrayList<>(List.of(
+//                    new Lesson("Programming Princeples 1", "CSCI1103", 6),
+//                    new Lesson("Calculus 1", "MATH1102", 5),
+//                    new Lesson("Discrete Stuctures", "CSCI1102", 5),
+//                    new Lesson("English", "LAN1180", 10),
+//                    new Lesson("Programming Princeples 2", "CSCI1204", 6),
+//                    new Lesson("Calculus 2", "MATH1202", 5),
+//                    new Lesson("Physics 1", "FUN1105", 5),
+//                    new Lesson("Statistics", "STAT2201", 5),
+//                    new Lesson("Merging Personal and Global", "HUM1137", 8),
+//                    new Lesson("Linear Algebra", "MATH1203", 5)
+//
+//            ));
+//            HashMap<Integer, List<Lesson>> lessonMap = new HashMap<>();
+//            lessonMap.put(1, lessonListCourse1);
+//
+//            List<Lesson> lessonListCourse2 = new ArrayList<>(List.of(
+//                    new Lesson("Database", "CSCI2104", 5),
+//                    new Lesson("Algorithms and Data Structures", "CSCI2105", 5),
+//                    new Lesson("Computer Architecture", "CSCI3115", 5),
+//                    new Lesson("Object-Oriented Programming and Design", "CSCI2106", 5),
+//                    new Lesson("Physical Education 1", "PHE101", 4),
+//                    new Lesson("Russian", "LAN1100", 5),
+//                    new Lesson("Kazakh", "LAN1100", 5),
+//                    new Lesson("Web development", "INFT2205", 6),
+//                    new Lesson("Computer Networks", "CSCI2109", 6),
+//                    new Lesson("Introduction to Bussiness Network", "CSCI2109", 6),
+//                    new Lesson(),
+//                    new Lesson("Physical Education 2", "PHE102", 4)
+//            ));
+//            lessonMap.put(2, lessonListCourse2);
+//
+//            List<Lesson> lessonListCourse3 = new ArrayList<>(List.of(
+//                    new Lesson("Software Engineering", "CSCI2208", 5),
+//                    new Lesson("Fundamentals of bussiness for Information Systems", "INF3106", 5),
+//                    new Lesson("Basics of Information Systems", "INF3106", 5),
+//                    new Lesson(),
+//                    new Lesson("ICT", "INFT1101", 5),
+//                    new Lesson("History", "HUM1101", 5),
+//                    new Lesson("Field Prrojects for IS", "INFT3210", 5),
+//                    new Lesson("Cyber Security", "INFT3105", 5),
+//                    new Lesson(),
+//                    new Lesson(),
+//                    new Lesson(),
+//                    new Lesson("Philosophy", "HUM1102",5)
+//
+//            ));
+//            lessonMap.put(3, lessonListCourse3);
+//            List<Lesson> lessonListCourse4 = new ArrayList<>(List.of(
+//                    new Lesson("IT Project Management", "INFT3108",5),
+//                    new Lesson("Industrial Internship", "PRA334",5),
+//                    new Lesson(),
+//                    new Lesson(),
+//                    new Lesson(),
+//                    new Lesson(),
+//                    new Lesson(),
+//                    new Lesson(),
+//                    new Lesson("Research Tools and Methods", "CSCI4102", 4),
+//                    new Lesson("Pre Diploma internship", "PRA437", 8),
+//                    new Lesson("Final Attestation", "IA504", 5)
+//            ));
+//            lessonMap.put(4, lessonListCourse4);
+//            objectOutputStream.writeObject(lessonMap);
+            List<Student> studentList = new ArrayList<>(
+                    List.of(
+                            new Student((int)Math.random() * 100, 4, "Alan", "Abzalkhanuly"),
+                            new Student((int)Math.random() * 100, 3, "Bekarys", "Myrkazul"),
+                            new Student((int)Math.random() * 100, 1, "Zeinaddin", "Zurgambaev"),
+                            new Student((int)Math.random() * 100, 2, "Ayakozz", "Zhalgaspaeva")
+                    )
+            );
+            objectOutputStream.writeObject(studentList);
             fileOutputStream.close();
 
         } catch (IOException e) {

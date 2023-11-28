@@ -6,14 +6,12 @@ public class Student implements Serializable {
     private int course;
     private String name;
     private String surname;
-    private Lesson lesson;
 
-    public Student(int id, int course, String name, String surname, Lesson lesson) {
+    public Student(int id, int course, String name, String surname) {
         this.id = id;
         this.course = course;
         this.name = name;
         this.surname = surname;
-        this.lesson = lesson;
     }
 
     public int getId() {
@@ -48,13 +46,6 @@ public class Student implements Serializable {
         this.surname = surname;
     }
 
-    public Lesson getLesson() {
-        return lesson;
-    }
-
-    public void setLesson(Lesson lesson) {
-        this.lesson = lesson;
-    }
 
 
     @Override
@@ -62,12 +53,12 @@ public class Student implements Serializable {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Student student = (Student) o;
-        return id == student.id && course == student.course && Objects.equals(name, student.name) && Objects.equals(surname, student.surname) && Objects.equals(lesson, student.lesson);
+        return id == student.id && course == student.course && Objects.equals(name, student.name) && Objects.equals(surname, student.surname);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, course, name, surname, lesson);
+        return Objects.hash(id, course, name, surname);
     }
 
     @Override
@@ -77,7 +68,6 @@ public class Student implements Serializable {
                 ", course=" + course +
                 ", name='" + name + '\'' +
                 ", surname='" + surname + '\'' +
-                ", lesson=" + lesson +
                 '}';
     }
 }
