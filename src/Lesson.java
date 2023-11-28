@@ -6,6 +6,10 @@ public class Lesson implements Serializable {
     private String code;
     private int credits;
 
+    public Lesson() {
+        this.name = "elective";
+    }
+
     public Lesson(String name, String code, int credits) {
         this.name = name;
         this.code = code;

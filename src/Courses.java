@@ -1,27 +1,32 @@
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class Courses {
-    private List<Lesson> courseList;
 
-    public Courses() {
+    private Student student;
+    private HashMap<Integer, List<Student>> courseMap;
+    public Courses(Student student) {
+        this.student = student;
     }
 
-    public void addCourse(String name, String code, int credits){
-        Lesson lesson = new Lesson(name, code, credits);
-        if(!courseList.contains(lesson)){
-            courseList.add(lesson);
-        } else {
-            System.out.println("This course already added");
+    public void storeStudents(){
+        for(Map.Entry<Integer, List<Student>> entry: courseMap.entrySet()){
         }
     }
 
-    public List<Lesson> getCourseList() {
-        return courseList;
+    public Student getStudent() {
+        return student;
     }
 
-    public void setCourseList(List<Lesson> courseList) {
-        this.courseList = courseList;
+//    public void setStudent(Student student) {
+//        this.student = student;
+//    }
+
+    @Override
+    public String toString() {
+        return "Courses{" +
+                "student=" + student +
+                '}';
     }
-
-
 }
