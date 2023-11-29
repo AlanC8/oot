@@ -19,7 +19,7 @@ public class ObjectDeserialization {
                 });
                 fileInputStream.close();
         } catch (IOException | ClassNotFoundException e) {
-            System.out.println("HTTP STATUS 404");
+            System.out.println(e);
         }
     }
 

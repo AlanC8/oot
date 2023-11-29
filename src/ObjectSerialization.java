@@ -76,10 +76,10 @@ public class ObjectSerialization {
 //            objectOutputStream.writeObject(lessonMap);
             List<Student> studentList = new ArrayList<>(
                     List.of(
-                            new Student((int)Math.random() * 100, 4, "Alan", "Abzalkhanuly"),
-                            new Student((int)Math.random() * 100, 3, "Bekarys", "Myrkazul"),
-                            new Student((int)Math.random() * 100, 1, "Zeinaddin", "Zurgambaev"),
-                            new Student((int)Math.random() * 100, 2, "Ayakozz", "Zhalgaspaeva")
+                            new Student(125, 4, "Alan", "Abzalkhanuly", "a_abzalkhanuly@kbtu.kz", "12341234"),
+                            new Student(542, 3, "Bekarys", "Myrkazul", "b_myrzakul@kbtu.kz", "12341234"),
+                            new Student(624, 1, "Zeinaddin", "Zurgambaev", "z_zurgambaev@kbtu.kz", "12341234"),
+                            new Student(91, 2, "Ayakozz", "Zhalgaspaeva", "a_zhalgaspaeva@kbtu.kz", "12341234")
                     )
             );
             objectOutputStream.writeObject(studentList);
