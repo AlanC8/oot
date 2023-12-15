@@ -1,2 +1,5 @@
-package Enum;public class Faculty {
+package Enum;
+
+public enum Faculty {
+    FIT, ISE, SCM, BS, OMA, OR
 }
