@@ -1,3 +1,7 @@
+package Main;
+
+import Employees.Employee;
+
 import java.util.Date;
 
 public class Message {
@@ -5,6 +9,9 @@ public class Message {
     private Date sentDate;
     private int addressAtId;
     private int senderId;
+
+    public Message(Employee employee, String recipient, String messageContent) {
+    }
 
     public void printMessages(){
 
@@ -16,7 +23,7 @@ public class Message {
 
     @Override
     public String toString() {
-        return "Message{" +
+        return "Main.Message{" +
                 "word='" + word + '\'' +
                 ", sentDate=" + sentDate +
                 ", addressAtId=" + addressAtId +

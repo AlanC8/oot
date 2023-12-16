@@ -1,3 +1,5 @@
+package Main;
+
 import java.util.Vector;
 
 public class Mail {
@@ -7,6 +9,6 @@ public class Mail {
 
     @Override
     public String toString() {
-        return "Mail{}";
+        return "Main.Mail{}";
     }
 }

@@ -30,7 +30,7 @@ public class User implements Serializable {
     }
 
 //    public void viewNews(){
-//        News news = new News();
+//        Main.News news = new Main.News();
 //        news.getNews();
 //    }
 

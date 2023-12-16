@@ -1,3 +1,5 @@
+package Main;
+
 import java.util.Date;
 
 public class News {
@@ -10,7 +12,7 @@ public class News {
 
     @Override
     public String toString() {
-        return "News{" +
+        return "Main.News{" +
                 "title='" + title + '\'' +
                 ", dayAndTime=" + dayAndTime +
                 '}';
